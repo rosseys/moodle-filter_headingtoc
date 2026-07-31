@@ -1,0 +1,51 @@
+/* This file is part of Moodle - http://moodle.org/
+ *
+ * Moodle is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * Moodle is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+ *
+ * @package    filter_headingtoc
+ * @copyright  2026 Roxana Castillo (Rosseys)
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ */
+
+.filter_headingtoc {
+    margin-block-end: 1.5rem;
+    padding: 0.75rem 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    background-color: rgba(0, 0, 0, 0.02);
+}
+
+.filter_headingtoc-title {
+    font-weight: 600;
+    margin-block-end: 0.5rem;
+}
+
+.filter_headingtoc ul,
+.filter_headingtoc ol {
+    margin-block: 0;
+    padding-inline-start: 1.25rem;
+}
+
+.filter_headingtoc li {
+    margin-block: 0.15rem;
+}
+
+.filter_headingtoc a {
+    text-decoration: none;
+}
+
+.filter_headingtoc a:hover,
+.filter_headingtoc a:focus {
+    text-decoration: underline;
+}
