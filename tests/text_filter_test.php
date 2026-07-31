@@ -168,7 +168,7 @@ final class text_filter_test extends \advanced_testcase {
 
         // The child link must sit inside a nested list under the parent.
         $this->assertMatchesRegularExpression(
-            '#toc-parent.*<ul><li><a href="#toc-child".*toc-sibling#s',
+            '~toc-parent.*<ul><li><a href="#toc-child".*toc-sibling~s',
             $out
         );
     }
