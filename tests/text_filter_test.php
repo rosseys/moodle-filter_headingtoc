@@ -126,9 +126,8 @@ final class text_filter_test extends \advanced_testcase {
         $input = '<h2>Alpha</h2><h2>Beta</h2>';
         $out = $this->get_filter()->filter($input);
 
-        $this->assertStringNotContainsString('<nav', $out);
-        // Anchors are still assigned so manual links can target them.
-        $this->assertStringContainsString('id="toc-alpha"', $out);
+        // Opt-in: nothing is rendered and the content is returned untouched.
+        $this->assertSame($input, $out);
     }
 
     /**

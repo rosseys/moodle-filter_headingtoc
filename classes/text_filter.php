@@ -60,6 +60,13 @@ class text_filter extends \core_filters\text_filter {
             $title = get_string('toctitle', 'filter_headingtoc');
         }
 
+        // Opt-in: with no marker and auto-insert disabled, nothing will be
+        // rendered, so leave the content untouched and skip the DOM round-trip.
+        // This keeps the filter from rewriting every heading on the site.
+        if (!$hasmarker && !$autotop) {
+            return $text;
+        }
+
         // Parse, collect the headings and assign missing ids on the DOM.
         $dom = $this->load_dom($text);
         if ($dom === null) {
