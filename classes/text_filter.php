@@ -205,6 +205,12 @@ class text_filter extends \core_filters\text_filter {
                 $node->setAttribute('id', $id);
                 $modified = true;
             }
+            // Tag managed headings so the stylesheet can briefly highlight the
+            // one the reader jumps to, without affecting other headings.
+            if (strpos(' ' . $node->getAttribute('class') . ' ', ' filter_headingtoc-target ') === false) {
+                $node->setAttribute('class', trim($node->getAttribute('class') . ' filter_headingtoc-target'));
+                $modified = true;
+            }
             $headings[] = [
                 'level' => (int)substr($node->nodeName, 1),
                 'id' => $id,

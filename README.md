@@ -43,6 +43,13 @@ Configure the filter at
   table of contents below this count. Default `3`.
 - **Numbered list** (`filter_headingtoc/numbered`) — render as an ordered list.
 
+## Landing highlight
+
+When a reader follows a link from the table of contents, the target heading is
+briefly highlighted (about three seconds) so it is easy to see where they
+landed. This is done with pure CSS (`:target`) — no JavaScript — and it respects
+the `prefers-reduced-motion` setting.
+
 ## Accessibility
 
 The table of contents is a `<nav>` landmark with an `aria-label` set to the

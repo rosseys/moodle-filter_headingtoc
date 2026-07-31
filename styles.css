@@ -49,3 +49,32 @@
 .filter_headingtoc a:focus {
     text-decoration: underline;
 }
+
+/* Briefly highlight the heading the reader jumps to from the table of
+ * contents, so it is easy to see where they landed. Pure CSS via :target,
+ * no JavaScript. scroll-margin-top keeps the heading clear of a fixed navbar. */
+.filter_headingtoc-target {
+    scroll-margin-top: 5rem;
+}
+
+.filter_headingtoc-target:target {
+    border-radius: 0.25rem;
+    animation: filter_headingtoc-flash 3s ease-out 1;
+}
+
+@keyframes filter_headingtoc-flash {
+    from {
+        background-color: rgba(255, 224, 130, 0.9);
+    }
+
+    to {
+        background-color: transparent;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .filter_headingtoc-target:target {
+        animation: none;
+        background-color: rgba(255, 224, 130, 0.35);
+    }
+}

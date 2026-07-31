@@ -24,7 +24,7 @@
 
 defined('MOODLE_INTERNAL') || die();
 
-$plugin->version   = 2026073000;        // The current plugin version (YYYYMMDDXX).
+$plugin->version   = 2026073001;        // The current plugin version (YYYYMMDDXX).
 $plugin->requires  = 2025041400;        // Requires Moodle 5.0 or later.
 $plugin->component = 'filter_headingtoc'; // Full name of the plugin.
 $plugin->maturity  = MATURITY_STABLE;   // First stable release.
